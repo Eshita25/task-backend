@@ -21,6 +21,9 @@ clients = []
 polls = [] 
 poll_counter = 0
 
+@app.get('/')
+async def print_hello():
+    print("hello world")
 
 @app.websocket("/ws")
 async def websocket_endpoint(websocket: WebSocket):
